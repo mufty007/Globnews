@@ -45,6 +45,7 @@ main{
   display:flex;
   flex-wrap:wrap;
   position:relative;
+  align-self:center;
 }
 
 .article{
@@ -65,6 +66,7 @@ main{
   position:absolute;
   top:-100px;
   left:30px;
+  
 }
 
 .article .details{
@@ -92,4 +94,104 @@ main{
   float:right;
   text-decoration:none;
   background:rgb(0, 110, 255);
+}
+
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+
+body {
+  display:flex;
+  flex-direction:column;
+}
+
+
+header{
+  position:fixed;
+  width:100%;
+  height:25%;
+  background-image:linear-gradient(to bottom, rgba(28, 120, 228, 0.50), rgba(28, 120, 228, 0.82)), url('img/bg.jpg');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.12);
+  z-index:998;
+}
+
+header .container img{
+  text-align:center;
+  width:60%;
+}
+
+header .container select{
+  width:300px;
+  height:40px;
+  border:none;
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+
+main{
+  width:100%;
+  height: 100%;
+  margin-top:210px;
+  margin-left:0px;
+  margin-right:0px;
+  display:flex;
+  flex-wrap:wrap;
+  position:relative;
+  justify-content:center;
+}
+
+.article{
+  width:280px;
+  margin:30px 0px;
+  padding:10px 30px;
+  background: #FFFFFF;
+  border-radius:10px;
+  box-shadow: 5px 15px 30px rgba(0, 0, 0, 0.2);
+  position:relative;
+  display:flex;
+  flex-direction:column;
+}
+
+.article img{
+  width:100%;
+  height:200px;
+  border-radius:10px;
+  box-shadow: 5px 15px 30px rgba(0, 0, 0, 0.2);
+  position:absolute;
+  top:-30px;
+  left:0px;
+  align-self:center;
+}
+
+.article .details{
+  padding-top:180px;
+}
+
+.article .details h2{
+  font-weight:bold;
+  font-size:20px;
+}
+
+.article .details p{
+  font-size:14px;
+  color: rgba(0, 0, 0, 0.6);
+  letter-spacing:1px;
+}
+
+.article .details a{
+  color:#F8FBFF;
+  font-size:14px;
+  font-weight:bold;
+  letter-spacing:1.2px;
+  padding:10px 20px;
+  border-radius:50px;
+  text-align:center;
+  text-decoration:none;
+  background:rgb(0, 110, 255);
+}
 }
