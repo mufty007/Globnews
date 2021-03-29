@@ -21,7 +21,7 @@ window.addEventListener('online', () => updateNews(sourceSelector.value));
 async function updateNewsSources() {
   const response = await fetch(`https://newsapi.org/v2/sources?apiKey=${apiKey}`);
   const json = await response.json();
-  sourceSelector.innerHTML = json.sources.map(source => `<option value="${source.id}">${source.name}</option>`).join('\n');
+  sourceSelector.innerHTML = json.sources.Map(source => `<option value="${source.id}">${source.name}</option>`).join('\n');
 }
 
 async function updateNews(source = defaultSource) {
